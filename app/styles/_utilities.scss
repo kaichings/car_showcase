@@ -1,0 +1,15 @@
+@function spacing($n) {
+  @return map-get($spacing-map, $n);
+}
+
+@mixin sp {
+  @media screen and (max-width: ($breakpoint--sp)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: ($breakpoint--pc)) {
+    @content;
+  }
+}

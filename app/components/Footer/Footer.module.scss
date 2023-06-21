@@ -1,0 +1,92 @@
+@import "@styles/index.scss";
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  color: #2b2c35;
+  margin-top: spacing(5);
+  border-top: 1px solid rgb(243 244 246);
+
+  &__Inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing(20);
+    padding: spacing(6) spacing(10);
+
+    @include sp {
+      padding-inline: spacing(16);
+    }
+  }
+
+  &__Links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: spacing(20);
+
+    &Main {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: spacing(6);
+    }
+
+    &Sub {
+      display: flex;
+      justify-content: flex-end;
+      flex: 2;
+      flex-wrap: wrap;
+      gap: spacing(20);
+    }
+  }
+
+  &__Logo {
+    object-fit: contain;
+  }
+
+  &__Text {
+    display: flex;
+    flex-direction: column;
+    color: rgb(55 65 81);
+    line-height: 1.5;
+
+    small {
+      font-size: $font-size--base;
+    }
+  }
+
+  &__Item {
+    &List {
+      min-width: 170px;
+      display: flex;
+      flex-direction: column;
+      gap: spacing(5);
+    }
+
+    &Title {
+      font-weight: bold;
+    }
+  }
+
+  &__Info {
+    display: flex;
+    justify-content: space-between;
+
+    &Main {
+      display: block;
+    }
+
+    &Sub {
+      ul {
+        display: flex;
+        column-gap: spacing(10);
+      }
+    }
+  }
+
+  &__Link {
+    color: rgb(107 114 128);
+  }
+}

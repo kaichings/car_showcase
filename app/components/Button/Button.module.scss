@@ -1,0 +1,23 @@
+@import "@styles/index.scss";
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: spacing(3) spacing(6);
+  line-height: 1.5;
+
+  &--Primary {
+    background-color: #2b59ff;
+    color: #fff;
+  }
+
+  &--TextPrimary {
+    color: #2b2c35;
+    background-color: #fff;
+  }
+
+  &--Round {
+    border-radius: 9999px;
+  }
+}

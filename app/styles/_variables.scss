@@ -1,0 +1,26 @@
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1080px,
+) !default;
+
+$max-width: 1440px;
+
+$spacing-map: ();
+@for $i from 1 through 50 {
+  $map: ();
+  $map: map-merge(
+    $map,
+    (
+      $i: #{0.25 * $i}rem,
+    )
+  );
+  $spacing-map: map-merge($spacing-map, $map);
+}
+
+$breakpoint--pc: map-get($breakpoints, lg);
+$breakpoint--sp: map-get($breakpoints, md);
+
+@debug $breakpoint--pc;
+
+$font-size--base: 1rem !default;

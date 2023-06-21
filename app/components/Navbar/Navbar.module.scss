@@ -1,0 +1,37 @@
+@import "@styles/index.scss";
+
+.Navbar {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &__Inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $max-width;
+    margin-inline: auto;
+    padding: spacing(8) spacing(6);
+
+    @include sp {
+      padding: spacing(8) spacing(16);
+    }
+  }
+
+  &__Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__Logo {
+    object-fit: contain;
+  }
+
+  &__Button {
+    min-width: 130px;
+  }
+}
